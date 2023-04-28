@@ -1,0 +1,34 @@
+Liste des touches :
+
+F1 - Sauvegarder l'attack wave (QuickSave)
+F2 - Charger l'attack wave (QuickLoad)
+N - Tout effacer et recommencer une attack wave (New)
+T - (T)ester l'attack wave --> Démarre l'attaque wave à la position de la souris
+Curseur Droite et gauche - Se déplacer dans les points pivots
+Suppr - (S)upprimer un point pivot
+R - (R)etracer l'attaque wave
+P - Voir les (P)ivots
+D - (D)iviser le nombre de pivot par 2
+
+C - passer en mode modification point pivot / quitter le mode modification point pivot (Change)
+Curseur Haut / Bas / Gauche / Droite - Bouger un point pivot
+
+Echap - Quitter l'application et générer le code source dans stdout.txt
+
+Fichier stdout.txt
+------------------
+
+Il contient 2 définitions d'attaque wave :
+
+1)
+const char awc[] --> Contient les mouvement relatif.
+
+Ex :
+
+2,0,1,	--> Faire 2 fois x = x + (+0) et y = y + (+1)
+1,-1,-1, --> Faire 1 fois x = x + (-1) et y = y + (-1)
+
+2)
+const char aw_pivot[] --> Contient les positions absolues des points pivots (x,y).
+
+A utiliser pour d'autres algorithmes de type Bresenham.
